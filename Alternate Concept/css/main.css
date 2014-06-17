@@ -63,6 +63,7 @@ body{
 	z-index:0; /* Keeping everything straight in my head */
 	margin:0;
 	color:#0a1c30;
+	background-color:#27ae60; /* So that incase there isn't enough content, the footer doesn't look TOO off */
 }
 
 /* Highlight Colors */
@@ -80,11 +81,11 @@ body{
 a{
 	text-decoration:none;
 	font-weight:bold;
-	transition:color ease-in-out .4s;
-	-webkit-transition:color ease-in-out .4s;
-	-ms-transition:color ease-in-out .4s;
-	-moz-transition:color ease-in-out .4s;
-	-o-transition:color ease-in-out .4s;
+	transition:all ease-in-out .4s;
+	-webkit-transition:all ease-in-out .4s;
+	-ms-transition:all ease-in-out .4s;
+	-moz-transition:all ease-in-out .4s;
+	-o-transition:all ease-in-out .4s;
 }
 
 a:hover{
@@ -106,12 +107,12 @@ header{
 /* Navigation */
 
 nav{
-	margin:auto; /* Centers */
 	width:100%; /* Spans the whole page */
 	height:3em; /* Sets height. % and em prefered for it to be flexible for Tablet up to PC size */
 	z-index:3; /* Above the second, please! */
-	background-color:#999;
 	margin:0;
+	background-color:#3498db;
+	color:#fff;
 	-webkit-transform-style:preserve-3d; /* Prevents bluring from Vertial Aligning */
 	-moz-transform-style:preserve-3d;
 	transform-style:preserve-3d;
@@ -124,35 +125,46 @@ nav{
 	position:fixed; /* Keep it consistently scrolling */
 	z-index:1; /* Have it below nav so that it has an effect of it popping out from under the header */
 	margin:0;
-	background-color:#888;
+	background-color:#2980b9;
+	box-shadow:0 .1em .2em .2em #2c3e50;
+	color:#fff;
 	-webkit-transform-style:preserve-3d; /* Prevents bluring from Vertial Aligning */
 	-moz-transform-style:preserve-3d;
 	transform-style:preserve-3d;
 }
 
-#navb a:link{
-	color:#ecf0f1;
-}
-
-#nav a:hover{
-	color:#3498db;
-}
-
-#nav a:visited{
-	color:#ecf0f1;
+nav, #navb{
+	text-shadow:.1em .1em .1em #000;
 }
 
 .linkTop{
-	margin-left:80%;
+	display:block;
+	max-width:20%;
+	left:75%;
+	top: -50%;					/* Vertical Aligning */
+}
+
+.linkTop:link{
+	color:#ecf0f1;
+}
+
+.linkTop:visited{
+	color:#ecf0f1;
+}
+
+.linkTop:hover{
+	color:#9b59b6;
 }
 
 .row{
-	margin-left:2%;
+	margin-left:3%;
 	height:1.8em;
 	width:100%;
 	padding:.1em;
 	position: relative;
-	top: 60%;					/* Vertical Aligning */
+	font-size:1.2em;
+	font-weight:bold;
+	top: 65%;					/* Vertical Aligning */
 	transform:translateY(-50%); /* Translates the other half */
 	-webkit-transform:translateY(-50%);
 	-moz-transform:translateY(-50%);
@@ -164,23 +176,34 @@ nav{
 section{
 	width:100%;
 	height:100%;
-	background-color:#777;
-	padding-top:1em;
+	background-color:#95a5a6;
 	padding-bottom:1em;
 }
 
-/* Article */
+/* Content ColA */
 
-article{
+#cola{
 	width:60%;
-	background-color:#666;
+	background-color:;
 	display:inline-block;
 	margin-left:5%;
 	margin-right:1%;
-	padding:1%;
+	
+}
+
+article, aside{
+	padding:1em;
+	margin-top:1em;
+	background-color:#ecf0f1;
+	line-height:1.2em;
+	box-shadow:.3em .3em .5em .2em #2c3e50;
 }
 
 article a:link{
+	color:#3498db;
+}
+
+article a:visited{
 	color:#3498db;
 }
 
@@ -188,20 +211,53 @@ article a:hover{
 	color:#34495e;
 }
 
-article a:visited{
-	color:#3498db;
+.title p{
+	font-size:2em;
+	text-align:center;
+	vertical-align:middle;
 }
 
-/* Aside */
-aside{
+/* Content ColB */
+#colb{
 	width:20%;
-	background-color:#555;
+	background-color:;
 	display:inline-block;
 	margin-left: 4%;
-	padding:1%;
 }
 
 /* Footer */
 footer{
-	background-color:#555;
+	width:100%;
+	height:100%;
+	background-color:#27ae60;
+	color:#fff;
+	line-height:1.2em;
+	bottom:0;
+}
+
+footer p{
+	margin:1em;
+	padding-left:1em;
+}
+
+footer a:link{
+	color:#f1c40f;
+}
+
+footer a:visited{
+	color:#f1c40f;
+}
+
+footer a:hover{
+	color:#fff;
+}
+
+.col{
+	display:inline-block;
+	width:32%;
+	margin-left:1%;
+}
+
+.col p{
+	border-left:.3em solid #fff;
 }
